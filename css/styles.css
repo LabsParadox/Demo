@@ -1,0 +1,21 @@
+body {
+  background-color: #333 !important;
+  color: #fff !important; }
+
+.card {
+  background-color: #444 !important;
+  color: #fff !important; }
+
+.card-header {
+  background-color: #555 !important;
+  color: #fff !important; }
+
+.graph-container {
+  background-color: #222 !important; }
+
+.divider {
+  height: 1px !important;
+  background-color: #555 !important; }
+
+.metrics-container {
+  margin-top: 20px; }
