@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;500;600;700;800&display=swap');
+
 $dark: #303030;
 $dark-hover: #151515;
 
@@ -7,8 +9,9 @@ $white-hover: #151515;
 $accent: #00d0ff;
 
 body {
-  background-color: #151515 !important;
-  color: $white !important;
+  background-color: #151515;
+  color: $white;
+  font-family: 'Lexend Deca', sans-serif;
 }
 
 .mobile-message {
@@ -24,23 +27,23 @@ body {
   grid-gap: 20px;
 }
   
-.card {
-  background-color: #444 !important;
-  color: $white !important;
+.card, card-header {
+  background-color: #444 ;
+  color: $white ;
 }
 
 .card-header {
-  background-color: #555 !important;
-  color: $white !important;
+  background-color: #555 ;
+  color: $white ;
 }
 
 .graph-container {
-  background-color: #222 !important;
+  background-color: #222 ;
 }
 
 .divider {
-  height: 1px !important;
-  background-color: #555 !important;
+  height: 1px ;
+  background-color: #555 ;
 }
 
 .metrics-container {
@@ -54,6 +57,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin: 10px 0px -30px 0px;
 
     a, Link {
       color: $white;
@@ -108,7 +112,7 @@ body {
     border-radius: 15px;
     border: none;
     padding: 10px 0px 10px 0px;
-    margin: 10px 0px 10px 0px;
+    margin: 10px 0px 0px 0px;
     cursor: pointer;
 
     &:hover {

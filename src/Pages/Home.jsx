@@ -1,8 +1,4 @@
-// Standard Imports
 import React from 'react';
-import '../scss/styles.scss';
-
-// Page Specific Imports
 import Dashboard from '../components/Dashboard';
 
 class Home extends React.Component {

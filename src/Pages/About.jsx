@@ -1,6 +1,4 @@
-// Standard Imports
 import React from 'react';
-import '../scss/styles.scss';
 
 const divStyle = {
     color:'white'
