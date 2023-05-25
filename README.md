@@ -1,4 +1,4 @@
-# Paradox Labs Creator Stats App Documentation
+# Creator Stats App - Documentation
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and is being hosted [here, on prdx.cloud](https://prdx.cloud).
 
