@@ -7,46 +7,48 @@ $white-hover: #151515;
 $accent: #00d0ff;
 
 body {
-    background-color: #151515 !important;
-    color: $white !important;
-  }
+  background-color: #151515 !important;
+  color: $white !important;
+}
+
+.mobile-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
 
 .nav-content-grid {
   display: grid;
   grid-template-columns: 1fr 5fr; /* 1/6 and 5/6 column sizes */
-  grid-gap: 20px; /* Gap between columns (adjust as needed) */
+  grid-gap: 20px;
 }
   
-  .card {
-    background-color: #444 !important;
-    color: $white !important;
-  }
-  
-  .card-header {
-    background-color: #555 !important;
-    color: $white !important;
-  }
-  
-  .graph-container {
-    background-color: #222 !important;
-  }
-  
-  .divider {
-    height: 1px !important;
-    background-color: #555 !important;
-  }
-  
-  .metrics-container {
-    margin-top: 20px;
-  }
+.card {
+  background-color: #444 !important;
+  color: $white !important;
+}
+
+.card-header {
+  background-color: #555 !important;
+  color: $white !important;
+}
+
+.graph-container {
+  background-color: #222 !important;
+}
+
+.divider {
+  height: 1px !important;
+  background-color: #555 !important;
+}
+
+.metrics-container {
+  margin-top: 20px;
+}
 
   // Sidebar Menu ---------------------------------------
   // Note, we have to use PIXELS for padding, margin, etc to keep background and menu tied together
-
-  .nav-container {
-    
-  }
-
 
   .sidebar-menu {
     display: flex;
