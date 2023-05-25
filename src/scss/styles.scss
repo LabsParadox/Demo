@@ -1,16 +1,30 @@
+$dark: #303030;
+$dark-hover: #151515;
+
+$white: #ffffff;
+$white-hover: #151515;
+
+$accent: #00d0ff;
+
 body {
-    background-color: #333 !important;
-    color: #fff !important;
+    background-color: #151515 !important;
+    color: $white !important;
   }
+
+.nav-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 5fr; /* 1/6 and 5/6 column sizes */
+  grid-gap: 20px; /* Gap between columns (adjust as needed) */
+}
   
   .card {
     background-color: #444 !important;
-    color: #fff !important;
+    color: $white !important;
   }
   
   .card-header {
     background-color: #555 !important;
-    color: #fff !important;
+    color: $white !important;
   }
   
   .graph-container {
@@ -25,4 +39,80 @@ body {
   .metrics-container {
     margin-top: 20px;
   }
+
+  // Sidebar Menu ---------------------------------------
+  // Note, we have to use PIXELS for padding, margin, etc to keep background and menu tied together
+
+  .nav-container {
+    
+  }
+
+
+  .sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    a, Link {
+      color: $white;
+      text-decoration: none;
+      display: flex;
+      align-items: center; 
+      justify-content: center;
+
+      &:hover {
+        color: $accent;
+      }
+    }
+  }
   
+  .menu-button {
+    font-weight: bold;
+    z-index: 1;
+    width: 200px;
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    background-color: #eaeaea;
+    margin: 0px 0px 35px 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .sub-options {
+    transform: translateY(-55px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #c0c0c0;
+    transition: all 0.2s ease;
+    overflow: hidden;
+    max-height: 0;
+    width: 200px;
+    margin-left: 20px;
+    border-radius: 0px 0px 20px 20px;
+  }
+  
+  .sub-options.expanded {
+    max-height: 400px;
+    width: 200px;
+    margin-left: 20px;
+    padding: 30px 0px 10px 0px;
+  }
+  
+  .sub-option {
+    background-color: $dark;
+    width: 90%;
+    border-radius: 15px;
+    border: none;
+    padding: 10px 0px 10px 0px;
+    margin: 10px 0px 10px 0px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $dark-hover;
+    }
+  }
+  
+  
+    // -----------------------------------------------------

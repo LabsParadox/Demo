@@ -1,41 +1,42 @@
+// Standard Imports
 import React from 'react';
-import Dashboard from './components/Dashboard';
-import { Route, Switch, Link } from "react-router-dom";
-
-import Home from './Home';
-import About from './About';
-
 import './styles.css';
+
+// Page Specific Imports
+import { Route, Switch } from "react-router-dom";
+import Home from './Pages/Home';
+import About from './Pages/About';
+import MenuTest from './Pages/MenuTest';
+import SidebarMenu from './components/SidebarMenu';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <div>
-        <nav>
-          <ul id="navigation">
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
-            </li>
-          </ul>
-        </nav>
+    <div className='nav-content-grid'>
+      {/* Website Menu */}
+      <div className='nav-container'>
+        <SidebarMenu menuName="Page Navigator"/>
       </div>
 
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/about">
-          <About />
-        </Route>
-      </Switch>
-      
-      <Dashboard />
+      {/* Website content is rendered here */}
+      <div>
+        <div className="App" />
+
+        {/* React Router (invisible) */}
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/menutest">
+            <MenuTest />
+          </Route>
+        </Switch>
+        
+      </div>
     </div>
   );
 }

@@ -1,4 +1,6 @@
+// Standard Imports
 import React from 'react';
+import '../scss/styles.scss';
 
 const divStyle = {
     color:'white'
@@ -11,7 +13,7 @@ class About extends React.Component {
             <div style={divStyle}>
                 <h2>About Page</h2>
                 <main>
-                    <p>This section contains information about...</p>
+                    <p>this app is cool (i'm keeping this just for easy menu testing between more than two pages)</p>
                 </main>
             </div>
         )
