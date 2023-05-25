@@ -1,8 +1,8 @@
-# Creator Stats App - Documentation
+# Creator Stats App - Documentation 🎉
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and is being hosted [here, on prdx.cloud](https://prdx.cloud).
 
-## Getting Started
+## Getting Started 🤔
 
 - Setup Git on your computer, SSH Keys, etc.
 - Clone this repo to where you want using SSH like:
@@ -12,9 +12,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Open your terminal and use the `CD` command to navigate to the project
 - Run the command `npm install` to install all neccesary packages.
 
-## Commands to Know
+## Commands to Know 💿
 
-### `npm run dev`
+### 🛠️ `npm run dev`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -22,11 +22,11 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm run deploy`
+### 📦 `npm run deploy`
 
 Automatically builds the project and minifies it. The built project is pushed to the `gh-pages` branch and deployed immedietly and automatically.
 
-### `npm run eject`
+### 🚨 `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
