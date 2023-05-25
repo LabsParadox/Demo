@@ -1,17 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;500;600;700;800&display=swap');
 
-$dark: #303030;
-$dark-hover: #151515;
-
+$black: #000000;
+$dark: #151515;
+$gray: #303030;
 $white: #ffffff;
-$white-hover: #151515;
-
 $accent: #00d0ff;
 
+$app-bg: $black;
+$app-text: $white;
+
+$menu-button-bg: $gray;
+
+$sub-option-bg: $dark;
+
+$sub-option-button-bg: $gray;
+$sub-option-button-bg_hover: $accent;
+
 body {
-  background-color: #151515;
-  color: $white;
-  font-family: 'Lexend Deca', sans-serif;
+  background-color: $app-bg;
+  color: $app-text;
+  font-family: 'Wix Madefor Display', sans-serif;
+}
+
+div {
+  font-family: 'Wix Madefor Display', sans-serif;
 }
 
 .mobile-message {
@@ -46,10 +58,6 @@ body {
   background-color: #555 ;
 }
 
-.metrics-container {
-  margin-top: 20px;
-}
-
   // Sidebar Menu ---------------------------------------
   // Note, we have to use PIXELS for padding, margin, etc to keep background and menu tied together
 
@@ -67,19 +75,21 @@ body {
       justify-content: center;
 
       &:hover {
-        color: $accent;
+        color: $dark;
       }
     }
   }
   
   .menu-button {
-    font-weight: bold;
     z-index: 1;
+    background-color: $menu-button-bg;
+    color: $white;
+    font-weight: bold;
+    font-size: 20px;
     width: 200px;
     height: 50px;
     border-radius: 20px;
     border: none;
-    background-color: #eaeaea;
     margin: 0px 0px 35px 20px;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -90,7 +100,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #c0c0c0;
+    background-color: $sub-option-bg;
     transition: all 0.2s ease;
     overflow: hidden;
     max-height: 0;
@@ -107,7 +117,7 @@ body {
   }
   
   .sub-option {
-    background-color: $dark;
+    background-color: $sub-option-button-bg;
     width: 90%;
     border-radius: 15px;
     border: none;
@@ -116,7 +126,7 @@ body {
     cursor: pointer;
 
     &:hover {
-      background-color: $dark-hover;
+      background-color: $sub-option-button-bg_hover;
     }
   }
   

@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import AnalyticsCard from './AnalyticsCard';
-import { Container, Row, Col } from 'react-bootstrap';
 import '@nivo/core';
 import '@nivo/line';
 
@@ -33,39 +32,15 @@ function Dashboard() {
       subscribers: 2000,
       retention: '90%',
     },
-  };  
-  
-
-  const [isSmallScreen, setIsSmallScreen] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsSmallScreen(window.innerWidth < 768);
-    };
-
-    handleResize(); // Initial check
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+  }; 
 
   return (
-    <Container fluid>
-      <h1>Your Analytics Dashboard</h1>
-      <Row>
-        <Col lg={isSmallScreen ? 12 : 4}>
+    <div>
+      <h1>Creator Stats Home</h1>
           <AnalyticsCard data={dummyData.youtube} />
-        </Col>
-        <Col lg={isSmallScreen ? 12 : 4}>
           <AnalyticsCard data={dummyData.tiktok} />
-        </Col>
-        <Col lg={isSmallScreen ? 12 : 4}>
           <AnalyticsCard data={dummyData.instagram} />
-        </Col>
-      </Row>
-    </Container>
+    </div>
   );
 }
 

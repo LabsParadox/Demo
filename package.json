@@ -17,7 +17,7 @@
   },
   "scripts": {
     "start": "BROWSER=none react-scripts start",
-    "sass": "node-sass src/scss -o src/scss --watch",
+    "sass": "node-sass src/css -o src/scss --watch",
     "dev": "concurrently \"npm run start\" \"npm run sass\"",
     "deploy": "npm run build && echo 'prdx.cloud' > ./build/CNAME && gh-pages -d build",
     "build": "react-scripts build",
