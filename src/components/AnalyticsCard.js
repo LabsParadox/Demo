@@ -1,7 +1,6 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
 import { ResponsiveLine } from '@nivo/line';
-import '../styles.css';
 
 const AnalyticsCard = ({ data }) => {
   const { platform, views, watchTime, subscribers, retention, followers, engagement, likes, comments, reach } = data;
