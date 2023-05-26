@@ -10,7 +10,6 @@ class Login extends React.Component {
     render() {
         return (
             <div>
-                this is a test
                 <passage-auth app-id="GyI3m3xjduAxX2W5ndQUbJ55"></passage-auth>
                 <script src="https://psg.so/web.js"></script>
             </div>
