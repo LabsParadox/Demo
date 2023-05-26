@@ -10,7 +10,7 @@ class Login extends React.Component {
     render() {
         return (
             <div>
-                <passage-auth app-id={process.env.PARADOX_PASSAPGE_APP_ID}></passage-auth>
+                <passage-auth app-id="GyI3m3xjduAxX2W5ndQUbJ55"></passage-auth>
                 <script src="https://psg.so/web.js"></script>
             </div>
         )
