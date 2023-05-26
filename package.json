@@ -45,6 +45,7 @@
   "devDependencies": {
     "@passageidentity/passage-elements": "^1.6.0",
     "@passageidentity/passage-node": "^2.2.0",
+    "@react-oauth/google": "^0.11.0",
     "concurrently": "^8.0.1",
     "gh-pages": "^5.0.0",
     "node-sass": "^7.0.3",
