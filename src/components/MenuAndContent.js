@@ -1,12 +1,12 @@
 import React from 'react';
-
-import { Route, Switch } from "react-router-dom";
+import { Routes, Route } from 'react-router-dom';
+import RequireAuth from '../js/RequireAuth';
 import SidebarMenu from '../components/SidebarMenu';
 
 import Home from '../Pages/Home';
+import Dashboard from './Dashboard';
 import About from '../Pages/About';
 import Passage from '../Pages/Passage';
-import Google from '../Pages/Google';
 import Test from '../Pages/Test';
 
 const MenuAndContent = () => {
@@ -18,7 +18,6 @@ const MenuAndContent = () => {
         ['link', '/', 'Home'],
         ['link', '/about', 'About'],
         ['link', '/passage', 'Passage Login'],
-        ['link', '/google', 'Google Login'],
         ['a', 'https://paradoxlabs.co', 'Paradox Website'],
       ];
 
@@ -32,40 +31,24 @@ const MenuAndContent = () => {
         ['a', 'https://analytics.google.com', 'Google Analytics'],
       ];
 
-    return (
+return (
     <div className="nav-content-grid ">
-        {/* Website Menu */}
-        <div className='nav-container'>
+    {/* Website Menu */}
+    <div className='nav-container'>
         <SidebarMenu menuName="Menu" subOptions={mainMenu} />
         <SidebarMenu menuName="Socials" subOptions={socials} />
-        </div>
+    </div>
 
-        {/* Pages are rendered with React Router */}
-        <div>
-            <Switch>
-
-                <Route exact path="/">
-                    <Home />
-                </Route>
-
-                <Route path="/about">
-                    <About />
-                </Route>
-
-                <Route path="/passage">
-                    <Passage />
-                </Route>
-
-                <Route path="/google">
-                    <Google />
-                </Route>
-
-                <Route path="/test">
-                    <Test />
-                </Route>
-
-            </Switch>
-        </div>
+    {/* Pages are rendered with React Router */}
+    <div>
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/about" element={<RequireAuth><About /></RequireAuth>} />
+            <Route path="/passage" element={<RequireAuth><Passage /></RequireAuth>} />
+            <Route path="/test" element={<RequireAuth><Test /></RequireAuth>} />
+        </Routes>
+    </div>
     </div>
   );
 };

@@ -1,32 +1,31 @@
 import React from 'react';
-import Dashboard from '../components/Dashboard';
+import { GoogleLogin } from '@react-oauth/google';
+import AuthContext from '../js/AuthContext';
 
 class Home extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-        dayOfWeek: ''
-      };
-    }
-  
-    componentDidMount() {
-      const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-      const date = new Date();
-      const dayOfWeek = days[date.getDay()];
-  
-      this.setState({ dayOfWeek });
-    }
+    static contextType = AuthContext;
+
+    responseMessage = (response) => {
+        const profile = response.getBasicProfile();
+        const id_token = response.getAuthResponse().id_token;
+
+        this.context.setAuth({
+          name: profile.getName(),
+          imageUrl: profile.getImageUrl(),
+          email: profile.getEmail(),
+          id_token: id_token,
+        });
+    };
+
+    errorMessage = (error) => {
+        console.log(error);
+    };
   
     render() {
-      const { dayOfWeek } = this.state;
-        return (
-            <div>
-                <h1>Happy {dayOfWeek} folk! Woo Hoo!</h1>
-                <Dashboard />
-            </div>
-        )
+      return (
+        <GoogleLogin onSuccess={this.responseMessage} onError={this.errorMessage} />
+      )
     }
-
 }
 
 export default Home;
