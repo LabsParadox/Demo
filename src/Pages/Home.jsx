@@ -5,9 +5,7 @@ class Home extends React.Component {
     render() {
         return (
             <div>
-                <main>
-                    <Dashboard />
-                </main>
+                <Dashboard />
             </div>
         )
     }

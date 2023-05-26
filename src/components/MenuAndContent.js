@@ -5,6 +5,8 @@ import SidebarMenu from '../components/SidebarMenu';
 
 import Home from '../Pages/Home';
 import About from '../Pages/About';
+import Login from '../Pages/Login';
+import Test from '../Pages/Test';
 
 const MenuAndContent = () => {
 
@@ -14,6 +16,7 @@ const MenuAndContent = () => {
     const mainMenu = [
         ['link', '/', 'Home'],
         ['link', '/about', 'About'],
+        ['link', '/login', 'Login'],
         ['a', 'https://paradoxlabs.co', 'Paradox Website'],
       ];
 
@@ -45,6 +48,14 @@ const MenuAndContent = () => {
 
                 <Route path="/about">
                     <About />
+                </Route>
+
+                <Route path="/login">
+                    <Login />
+                </Route>
+
+                <Route path="/test">
+                    <Test />
                 </Route>
 
             </Switch>
