@@ -44,9 +44,9 @@ return (
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/about" element={<RequireAuth><About /></RequireAuth>} />
-            <Route path="/passage" element={<RequireAuth><Passage /></RequireAuth>} />
-            <Route path="/test" element={<RequireAuth><Test /></RequireAuth>} />
+            <Route path="/about" element={<About />} />
+            <Route path="/passage" element={<Passage />} />
+            <Route path="/test" element={<Test />} />
         </Routes>
     </div>
     </div>
